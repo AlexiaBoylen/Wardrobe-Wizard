@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wardrobe Wizard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Wardrobe Wizard</h1>
+      <p>Create, randomize, and save your favorite looks.</p>
+    </header>
+
+    <main class="app-main">
+      <section class="panel catalog">
+        <h2>1. Pick Your Pieces</h2>
+
+        <div class="category">
+          <h3>Tops</h3>
+          <div class="items" id="tops-list"></div>
+        </div>
+
+        <div class="category">
+          <h3>Bottoms</h3>
+          <div class="items" id="bottoms-list"></div>
+        </div>
+
+        <div class="category">
+          <h3>Shoes</h3>
+          <div class="items" id="shoes-list"></div>
+        </div>
+
+        <div class="category">
+          <h3>Accessories</h3>
+          <div class="items" id="accessories-list"></div>
+        </div>
+      </section>
+
+      <section class="panel builder">
+        <h2>2. Outfit Preview</h2>
+
+        <div class="preview">
+          <div class="preview-part" id="preview-top">
+            <span class="preview-label">Top</span>
+            <span class="preview-name">None</span>
+          </div>
+          <div class="preview-part" id="preview-bottom">
+            <span class="preview-label">Bottom</span>
+            <span class="preview-name">None</span>
+          </div>
+          <div class="preview-part" id="preview-shoes">
+            <span class="preview-label">Shoes</span>
+            <span class="preview-name">None</span>
+          </div>
+          <div class="preview-part" id="preview-accessory">
+            <span class="preview-label">Accessory</span>
+            <span class="preview-name">None</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="random-btn">🎲 Random Outfit</button>
+          <button id="clear-btn">🧹 Clear</button>
+          <button id="save-btn" class="primary">💾 Save Outfit</button>
+        </div>
+
+        <p class="hint">
+          Tip: Click an item in each category to build a look.  
+          Use <strong>Random Outfit</strong> if you’re feeling lucky.
+        </p>
+      </section>
+
+      <section class="panel saved">
+        <h2>3. Saved Outfits</h2>
+        <div id="saved-list" class="saved-list">
+          <p class="empty-message">No outfits saved yet. Build one and hit “Save Outfit”.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span>Wardrobe Wizard Mockup • Vanilla HTML, CSS & JS</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

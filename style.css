@@ -1,0 +1,274 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #0f172a;
+  color: #f9fafb;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.03em;
+}
+
+.app-header p {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: #cbd5f5;
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.1fr;
+  gap: 1.25rem;
+}
+
+.panel {
+  background: #020617;
+  border-radius: 18px;
+  padding: 1rem 1.1rem;
+  border: 1px solid #1f2937;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.panel h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.category + .category {
+  margin-top: 0.6rem;
+}
+
+.category h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  color: #e5e7eb;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.item-card {
+  flex: 1 1 calc(50% - 0.5rem);
+  min-width: 120px;
+  background: #020617;
+  border-radius: 12px;
+  border: 1px solid #111827;
+  cursor: pointer;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, border 0.12s;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.item-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.7);
+  border-color: #4b5563;
+}
+
+.item-card.selected {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 1px #22c55e;
+}
+
+.item-swatch {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  border: 1px solid #111827;
+  flex-shrink: 0;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-name {
+  font-size: 0.85rem;
+}
+
+.item-detail {
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+
+.builder .preview {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.preview-part {
+  background: #020617;
+  border-radius: 14px;
+  padding: 0.6rem 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px dashed #1f2937;
+  transition: border 0.12s ease-out, background 0.12s ease-out;
+}
+
+.preview-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+}
+
+.preview-name {
+  font-size: 0.9rem;
+}
+
+.preview-part.has-item {
+  border-style: solid;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: #111827;
+  color: #f9fafb;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out, background 0.1s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.8);
+  background: #1f2937;
+}
+
+button.primary {
+  background: #22c55e;
+  color: #022c22;
+  font-weight: 600;
+}
+
+button.primary:hover {
+  background: #16a34a;
+}
+
+
+.saved-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.saved-card {
+  background: #020617;
+  border-radius: 12px;
+  border: 1px solid #111827;
+  padding: 0.6rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: border 0.1s, background 0.1s;
+}
+
+.saved-card:hover {
+  border-color: #4b5563;
+  background: #020617;
+}
+
+.saved-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.saved-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.saved-summary {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.saved-actions {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.saved-actions button {
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+}
+
+.saved-actions .delete-btn {
+  background: #991b1b;
+}
+
+.saved-actions .delete-btn:hover {
+  background: #b91c1c;
+}
+
+.empty-message {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.hint {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.app-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+
+@media (max-width: 960px) {
+  .app-main {
+    grid-template-columns: 1fr;
+    }
