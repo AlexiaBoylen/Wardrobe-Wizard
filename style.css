@@ -86,6 +86,8 @@ body {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55),
+              0 0 18px rgba(255, 255, 255, 0.06);
 }
 
 .item-card:hover {
@@ -245,7 +247,6 @@ button.primary:hover {
   border-radius: 999px;
 }
 
-/* style your normal load button via your existing .btn class */
 /* delete button */
 .saved-actions .delete-btn {
   background: #991b1b;
