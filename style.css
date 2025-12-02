@@ -304,6 +304,14 @@ button.primary:hover {
   font-size: 0.75rem;
   color: #6b7280;
 }
+.category-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
 
 
 @media (max-width: 960px) {
