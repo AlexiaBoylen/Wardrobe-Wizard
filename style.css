@@ -311,10 +311,58 @@ button.primary:hover {
   object-fit: cover;
   margin-right: 8px;
 }
+.category h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  color: #e5e7eb;
+}
 
+/* New: layout for icon + label */
+.category-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.category-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background-color: #020617;         /* pill backing so all icons feel consistent */
+  border: 1px solid #1f2937;
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.7),
+              0 6px 14px rgba(15, 23, 42, 0.8);
+  flex-shrink: 0;
+
+  background-size: 70% 70%;          /* keeps image inside the circle */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.category-icon--tops {
+  background-image: url("assets/icons/blue-tshirt.png");
+}
+
+.category-icon--bottoms {
+  background-image: url("assets/icons/purple-pants.jpeg");
+}
+
+.category-icon--shoes {
+  background-image: url("assets/icons/green-sneaker.png");
+}
+
+.category-icon--accessories {
+  background-image: url("assets/icons/golden-tag.jpg");
+}
 
 
 @media (max-width: 960px) {
   .app-main {
     grid-template-columns: 1fr;
     }
+
+@media (max-width: 960px) {
+  .category-icon {
+    width: 34px;
+    height: 34px;
+  }
+}
