@@ -191,46 +191,49 @@ button.primary:hover {
 }
 
 
+/* container for all saved outfits */
 .saved-list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
+/* whole card */
 .saved-card {
   background: #020617;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid #111827;
-  padding: 0.6rem 0.75rem;
+  padding: 0.75rem 0.9rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   gap: 0.5rem;
-  cursor: pointer;
-  transition: border 0.1s, background 0.1s;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.8);
+  transition: border 0.12s ease, transform 0.12s ease, box-shadow 0.12s ease;
 }
 
 .saved-card:hover {
   border-color: #4b5563;
-  background: #020617;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.95);
 }
 
-.saved-main {
+/* top row: "Outfit #1" + buttons */
+.saved-header {
   display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* title */
 .saved-name {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #e5e7eb;
 }
 
-.saved-summary {
-  font-size: 0.75rem;
-  color: #9ca3af;
-}
-
+/* buttons on the right */
 .saved-actions {
   display: flex;
   gap: 0.35rem;
@@ -238,15 +241,49 @@ button.primary:hover {
 
 .saved-actions button {
   font-size: 0.7rem;
-  padding: 0.3rem 0.6rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
 }
 
+/* style your normal load button via your existing .btn class */
+/* delete button */
 .saved-actions .delete-btn {
   background: #991b1b;
 }
 
 .saved-actions .delete-btn:hover {
   background: #b91c1c;
+}
+
+/* mini outfit preview area */
+.saved-mini {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* each TOP/BOTTOM/SHOES/ACCESSORY row */
+.saved-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: #020617;
+  border: 1px solid #1f2937;
+}
+
+/* left label (TOP/BOTTOM/…) */
+.saved-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+/* right selected item name */
+.saved-value {
+  font-size: 0.78rem;
+  color: #f9fafb;
 }
 
 .empty-message {
