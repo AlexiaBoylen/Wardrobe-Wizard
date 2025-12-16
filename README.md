@@ -5,6 +5,9 @@ Wardrobe Wizard is a web-based outfit planning application that allows users to 
 🌐 **Live Application:**  
 https://alexiaboylen.github.io/Wardrobe-Wizard/
 
+##Presentation
+[![Watch the video](https://img.youtube.com/vi/<ARLZV6xk4Ss>/0.jpg)](https://www.youtube.com/watch?v=<ARLZV6xk4Ss>)
+
 ---
 
 ## 🎯 Project Purpose
